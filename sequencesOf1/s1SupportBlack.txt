@@ -580,7 +580,6 @@
 20.h4 Qd8,1
 13.Bb3 Ng4,1
 22.Rh3 Nc4,1
-black,881
 11.f3 b5,1
 5.Bb5+ Nd7,2
 14.Bxh6 Nxf3,1

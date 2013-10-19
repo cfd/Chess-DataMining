@@ -25,6 +25,7 @@ public class ConfidenceCalculator {
 
 			try {
 				cc.calculateConfidenceForResult();
+				 
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -34,18 +35,6 @@ public class ConfidenceCalculator {
 			e.printStackTrace();
 		}
 
-		cc.shit();
-
-	}
-
-	public void shit() {
-		try {
-
-			writer.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
 	public void populateMixedResultSupportMap() throws FileNotFoundException {
@@ -53,7 +42,7 @@ public class ConfidenceCalculator {
 		mixedMoveSupportMap = new LinkedHashMap<String, Integer>();
 
 		Scanner scanner = new Scanner(new FileReader(
-				"sequencesOf4/s4SupportMixed.txt"));
+				"sequencesOf2/s2SupportMixed.txt"));
 
 		while (scanner.hasNextLine()) {
 			String line = scanner.nextLine().trim();
@@ -77,7 +66,7 @@ public class ConfidenceCalculator {
 		resultMoveSupportMap = new LinkedHashMap<String, Integer>();
 
 		Scanner scanner = new Scanner(new FileReader(
-				"sequencesOf4/s4SupportDraw.txt"));
+				"sequencesOf2/s2SupportDraw.txt"));
 
 		while (scanner.hasNextLine()) {
 			String line = scanner.nextLine().trim();
@@ -97,7 +86,8 @@ public class ConfidenceCalculator {
 	}
 
 	public void calculateConfidenceForResult() throws IOException {
-		writer = new BufferedWriter(new FileWriter("s4ConfidenceDraw.txt", true));
+		writer = new BufferedWriter(
+				new FileWriter("s2ConfidenceDraw.txt", true));
 
 		for (String move : mixedMoveSupportMap.keySet()) {
 			if (resultMoveSupportMap.containsKey(move)) {

@@ -19,11 +19,11 @@ public class Analysis {
 			//S2
 			//apriori.runAlgorithm(0.0, "chessGamesWhite.csv", "chessResultsWhiteS2.txt");
 			//apriori.runAlgorithm(0.0, "chessGamesBlack.csv", "chessResultsBlackS2.txt");
-			//apriori.runAlgorithm(0.0, "chessGamesDraw.csv", "chessResultsDrawS2.txt");
+			apriori.runAlgorithm(0.0, "chessGamesDraw.csv", "s2SupportDraw.txt");
 			//apriori.runAlgorithm(0.00265, "chessGamesMixed.csv", "chessResultsMixedS2.txt");
 			
 			//S3
-			apriori.runAlgorithm(0.0, "chessGamesWhite.csv", "s3SupportWhite.txt");
+			//apriori.runAlgorithm(0.0, "chessGamesWhite.csv", "s3SupportWhite.txt");
 			//apriori.runAlgorithm(0.0, "chessGamesBlack.csv", "s3SupportBlack.txt");
 			//apriori.runAlgorithm(0.0, "chessGamesDraw.csv", "s3SupportDraw.txt");
 			//apriori.runAlgorithm(0.00265, "chessGamesMixed.csv", "s3SupportMixed.txt");
