@@ -26,7 +26,7 @@ public class ConfidenceGraphMaker {
 		ConfidenceGraphMaker cgm = new ConfidenceGraphMaker();
 
 		try {
-			cgm.run("sequencesOf3/s3ConfidenceBlack.txt");
+			cgm.run("sequencesOf4/s4ConfidenceBlack.txt");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -59,7 +59,7 @@ public class ConfidenceGraphMaker {
 
 		}
 
-		JFreeChart bc = ChartFactory.createBarChart("Best 3-move Sequences for Black", "Sequences",
+		JFreeChart bc = ChartFactory.createBarChart("Best 4-move Sequences for Black", "Sequences",
 				"Confidence", ds, PlotOrientation.VERTICAL, false, false, false);
 		
 		CategoryAxis axis = bc.getCategoryPlot().getDomainAxis();
@@ -67,7 +67,7 @@ public class ConfidenceGraphMaker {
 		// ChartFrame cf = new ChartFrame("Test", bc);
 		// cf.setSize(4000, 2600);
 		// cf.setVisible(true);
-		ChartUtilities.saveChartAsPNG(new File("s3Black.png"), bc, 1000, 800);
+		ChartUtilities.saveChartAsPNG(new File("s4BlackSmall.png"), bc, 400, 260);
 
 	}
 }
